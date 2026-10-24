@@ -1,0 +1,31 @@
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Local settings
+.env
+.env.*
+
+# Challenge data and generated prediction files
+data/raw/*
+!data/raw/.gitkeep
+
+data/interim/*
+!data/interim/.gitkeep
+
+data/processed/*
+!data/processed/predictions/
+data/processed/predictions/*
+!data/processed/predictions/.gitkeep
+
+# Trained model artifacts
+models/*
+!models/.gitkeep
+
+# macOS
+.DS_Store
