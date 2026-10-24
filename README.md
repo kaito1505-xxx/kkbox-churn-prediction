@@ -143,8 +143,7 @@ The notebooks are intended to be run in order:
 
 The prediction pipeline loads the previously trained model artifact, builds April features using the March 31 cutoff, and generates probabilities for the user IDs in `sample_submission_v2.csv`.
 
-Docker is used for this batch prediction workflow. A FastAPI service is not required to generate the CSV and is outside the current project scope.
-
+Docker is used for this batch prediction workflow.
 ## Reproducibility notes
 
 - Use the same feature columns and preprocessing pipeline during training and prediction.
@@ -159,4 +158,3 @@ Docker is used for this batch prediction workflow. A FastAPI service is not requ
 - Train 2 was used during model development, so its result is not a fully independent estimate.
 - The April cohort has no labels available in this project; April prediction quality is unknown.
 - Predicted probabilities are risk scores. Unless calibration is evaluated separately, they should not automatically be interpreted as perfectly calibrated real-world probabilities.
-- This project produces batch predictions and does not expose an online prediction API.
